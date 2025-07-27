@@ -1,13 +1,10 @@
-# Batch H.264 to H.265 (HEVC) Video Converter
+# H.264 to H.265 Batch Video Converter
 
 This Bash script automates the process of recursively finding H.264 video files within a specified directory and converting them to the H.265 (HEVC) codec. It aims to reduce file sizes while preserving audio and subtitle streams. The script offers options for CPU (libx265) and GPU (VAAPI for AMD/Intel) encoding and includes an automatic file management system based on size reduction.
-
 ## Key Features
 
-- **Recursive Conversion:** Processes videos in the target directory and all its subdirectories.
-    
+-   **Recursive Conversion:** Scans a directory and all its subdirectories.
 - **H.265 (HEVC) Encoding:** Utilizes `ffmpeg` for efficient video compression.
-    
 - **CPU & GPU Encoding:**
     
     - CPU: `libx265` with selectable presets (`fast`, `medium`, `slow`).
@@ -39,39 +36,66 @@ This Bash script automates the process of recursively finding H.264 video files 
 
 ## ⚠️ WARNING: Automatic File Deletion
 
-This script includes an **automatic file deletion** feature based on the size comparison between the original H.264 and the converted H.265 file.
+This script **automatically deletes files**.
+-   If the new H.265 file is **smaller**, the **original H.264 file is deleted**.
+-   If the new H.265 file is **larger or the same size**, the **newly created H.265 file is deleted**.
 
-- **If H.265 is smaller -> ORIGINAL H.264 IS DELETED.**
-    
-- **If H.265 is NOT smaller -> NEW H.265 IS DELETED.**
-    
+**Please back up your files or use the `--dry-run` mode first if you are unsure.**
 
 **Ensure you have backups of your media or fully understand this behavior before running the script on important data.** You will be prompted for a final confirmation before any destructive operations begin (unless in dry-run mode).
 
-## Prerequisites
+## Installation & Dependencies
 
-Before running the script, ensure the following dependencies are installed:
+You must install the necessary command-line tools for your operating system before running the script.
 
-- **`ffmpeg`**: The core utility for video and audio conversion. For NVIDIA GPU encoding (if contributed), `ffmpeg` must be compiled with NVENC support.
-    
-- **`ffprobe`**: Part of the FFmpeg suite, used for media stream analysis.
-    
-- **`vainfo`** (Recommended for GPU encoding with VAAPI): Utility to check VAAPI status and available codecs. Part of `libva-utils` or similar packages.
-    
+### macOS (Homebrew)
 
-### Installation Examples
+First, make sure you have [Homebrew](https://brew.sh/) installed. Then, run the following command in your terminal to install all dependencies:
 
-**For Debian/Ubuntu-based systems:**
-
-```
-sudo apt update
-sudo apt install ffmpeg libva-utils
+```shell
+brew install ffmpeg mediainfo libva-utils
 ```
 
-**For Arch Linux-based systems:**
+### Linux (Arch)
+
+Use `pacman` to install all dependencies:
+
+```shell
+sudo pacman -S ffmpeg mediainfo libva-utils
+```
+
+### Linux (Debian / Ubuntu)
+
+Use `apt` to install all dependencies:
+
+```shell
+sudo apt-get update
+sudo apt-get install ffmpeg mediainfo vainfo
+```
+
+## Usage
+
+1.  Make the script executable:
+    ```shell
+    chmod +x convert_videos.sh
+    ```
+2.  Run the script:
+    ```shell
+    ./convert_videos.sh
+    ```
+3.  Follow the on-screen prompts to select your encoder and target directory.
+
+### Command-Line Options
 
 ```
-sudo pacman -Syu ffmpeg libva-utils
+Usage: ./convert_videos.sh [OPTIONS]
+
+Options:
+  -c, --config FILE     Path to configuration file (default: ./convert_h265.conf).
+  -d, --dry-run         Simulate conversions without actual changes.
+  -e, --extensions EXT  Comma-separated list of extensions (e.g., "mp4,mkv").
+  -l, --log-level LEVEL Log level: DEBUG, INFO, WARNING, ERROR.
+  -h, --help            Display the help message.
 ```
 
 **For Fedora:**

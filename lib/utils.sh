@@ -5,6 +5,9 @@ readonly LOG_LEVEL_DEBUG=0
 readonly LOG_LEVEL_INFO=1
 readonly LOG_LEVEL_WARNING=2
 readonly LOG_LEVEL_ERROR=3
+
+# Fix: Initialize with a default value
+CURRENT_LOG_LEVEL=$LOG_LEVEL_INFO
 export CURRENT_LOG_LEVEL
 
 # --- Logging & Helpers ---

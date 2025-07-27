@@ -1,0 +1,18 @@
+--- Log Start 2025-07-27 15:14:44 ---
+[INFO] [2025-07-27 15:14:44] Checking for required dependencies: ffmpeg, ffprobe, mediainfo...
+[INFO] [2025-07-27 15:14:44] All required dependencies found.
+[INFO] [2025-07-27 15:15:26] Script processing started.
+[INFO] [2025-07-27 15:15:26] Searching for video files in '/Volumes/samsung T7/ThePirateBay Downloads/AI and ML/Build RealWorld MachineLearning Projects With Python In 2023'...
+[INFO] [2025-07-27 15:15:26] Found 5 video files.
+[INFO] [2025-07-27 15:15:26] Processing: /Volumes/samsung T7/ThePirateBay Downloads/AI and ML/Build RealWorld MachineLearning Projects With Python In 2023/[TutsNode.net] - Build RealWorld MachineLearning Projects With Python In 2023/1. Project-1  UK_Road_Accident_Timeseries_Forecasting/1. UK_Road_Accident_Timeseries_Forecasting_EDA_h265.mp4
+[INFO] [2025-07-27 15:15:30] Skipping '1. UK_Road_Accident_Timeseries_Forecasting_EDA_h265.mp4': H.265 version already exists.
+[INFO] [2025-07-27 15:15:30] Processing: /Volumes/samsung T7/ThePirateBay Downloads/AI and ML/Build RealWorld MachineLearning Projects With Python In 2023/[TutsNode.net] - Build RealWorld MachineLearning Projects With Python In 2023/1. Project-1  UK_Road_Accident_Timeseries_Forecasting/2. Forecast UK Accident rates based on Number of Casualties on SARIMA,FbP,LSTM's_h265.mp4
+[INFO] [2025-07-27 15:15:30] Skipping '2. Forecast UK Accident rates based on Number of Casualties on SARIMA,FbP,LSTM's_h265.mp4': H.265 version already exists.
+[INFO] [2025-07-27 15:15:30] Processing: /Volumes/samsung T7/ThePirateBay Downloads/AI and ML/Build RealWorld MachineLearning Projects With Python In 2023/[TutsNode.net] - Build RealWorld MachineLearning Projects With Python In 2023/2. Project-2  Toxic_Comments_Classification/1. Toxic_Comments_Classification_EDA_h265.mp4
+[INFO] [2025-07-27 15:15:30] Skipping '1. Toxic_Comments_Classification_EDA_h265.mp4': H.265 version already exists.
+[INFO] [2025-07-27 15:15:30] Processing: /Volumes/samsung T7/ThePirateBay Downloads/AI and ML/Build RealWorld MachineLearning Projects With Python In 2023/[TutsNode.net] - Build RealWorld MachineLearning Projects With Python In 2023/2. Project-2  Toxic_Comments_Classification/2. NLP - Tokenized Sequences for Visualization_h265.mp4
+[INFO] [2025-07-27 15:15:30] Skipping '2. NLP - Tokenized Sequences for Visualization_h265.mp4': H.265 version already exists.
+[INFO] [2025-07-27 15:15:30] Processing: /Volumes/samsung T7/ThePirateBay Downloads/AI and ML/Build RealWorld MachineLearning Projects With Python In 2023/[TutsNode.net] - Build RealWorld MachineLearning Projects With Python In 2023/2. Project-2  Toxic_Comments_Classification/3. Model Refinement - Optimize NB,SVM,LR with Feature Weight_h265.mp4
+[INFO] [2025-07-27 15:15:30] Skipping '3. Model Refinement - Optimize NB,SVM,LR with Feature Weight_h265.mp4': H.265 version already exists.
+[INFO] [2025-07-27 15:15:30] Script finished successfully.
+[INFO] [2025-07-27 15:15:30] Script execution completed.
